@@ -1,0 +1,14 @@
+.MDS-DatePicker {
+    display: block;
+    width: 100%;
+    
+    &.no-border {
+        input {
+            padding: 0;
+        }
+    }
+    input {
+        background-color: transparent;
+        width: 100%; 
+    }
+}

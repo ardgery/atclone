@@ -1,0 +1,21 @@
+body.overlay::after, body.search-mode .search-mode-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+body.overlay::after {
+  content: '';
+  top: 0; }
+body.search-mode {
+  overflow: hidden; }
+  body.search-mode .search-mode-overlay {
+    top: 0;
+    z-index: 3; }
+  body.search-mode .spotlight {
+    z-index: 99; }
+
+/*# sourceMappingURL=overlay.css.map */

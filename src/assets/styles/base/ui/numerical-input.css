@@ -1,0 +1,48 @@
+.react-numeric-input {
+  height: 40px;
+  width: 100px;
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  position: relative; }
+  .react-numeric-input input {
+    width: 100%;
+    background: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center; }
+    .react-numeric-input input + b {
+      right: 0px;
+      left: auto;
+      margin-right: -1px;
+      margin-left: 0px; }
+      .react-numeric-input input + b i:after {
+        content: '+'; }
+  .react-numeric-input b {
+    height: 40px;
+    width: 30px;
+    margin-top: -1px;
+    border: 1px solid #d8d8d8;
+    margin-left: -1px;
+    background-color: #ffffff;
+    display: block;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer; }
+    .react-numeric-input b i:after {
+      content: '-'; }
+
+.mm-desktop .react-numeric-input {
+  border-radius: 6px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=numerical-input.css.map */

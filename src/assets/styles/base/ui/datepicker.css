@@ -1,0 +1,10 @@
+.MDS-DatePicker {
+  display: block;
+  width: 100%; }
+  .MDS-DatePicker.no-border input {
+    padding: 0; }
+  .MDS-DatePicker input {
+    background-color: transparent;
+    width: 100%; }
+
+/*# sourceMappingURL=datepicker.css.map */

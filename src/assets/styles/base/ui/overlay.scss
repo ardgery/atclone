@@ -1,0 +1,31 @@
+%overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+body {
+    &.overlay {
+        &::after {
+            content: '';
+            @extend %overlay;
+            top: 0;
+        }
+    }
+
+    &.search-mode {
+        overflow: hidden;
+        .search-mode-overlay {
+            @extend %overlay;
+            top: 0;
+            z-index: 3;
+        }
+        .spotlight {
+            z-index: 99;
+        }
+    }
+}

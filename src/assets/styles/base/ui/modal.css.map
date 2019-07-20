@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAwCA,MAAM;EACF,UAAU,EAJQ,OAAO;EAKzB,KAAK,EAjBa,IAAI",
+"sources": ["modal.scss"],
+"names": [],
+"file": "modal.css"
+}

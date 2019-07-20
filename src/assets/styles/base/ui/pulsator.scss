@@ -1,0 +1,47 @@
+@keyframes pulse {
+    0% {
+       transform: scale(1);
+       opacity: 1;
+    }
+    
+    50% {
+       opacity: 0.5;
+    }
+    
+    100% {
+       transform: scale(1.8);
+       opacity: 0;
+    }
+}
+
+.pulsator-wrapper {
+    position: absolute;
+    width: 100%;
+}
+ 
+ .pulsator,
+ .pulsator-wrapper::after {
+    left: 0;
+    right: 0;
+    margin: -14px auto auto;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border-color: #eb0029;
+    background: #eb0029;
+    box-shadow: 0 0 20px #FACED3;
+ }
+ 
+ .pulsator {
+    animation: pulse 2s infinite;
+ }
+ 
+ .pulsator-wrapper::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   animation: pulse 2s infinite 1s;
+ }

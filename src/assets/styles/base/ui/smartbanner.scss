@@ -1,0 +1,196 @@
+#smartbanner {
+	font-family: 'Montserrat', sans-serif;
+	position: static;
+	left: 0;
+	top: 0;
+	border: 1px solid #e8e8e8;
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	z-index: 9998;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	-webkit-text-size-adjust: none;
+	+ nav{
+		> div{
+			> div{
+				position: relative;
+			}
+		}
+	}
+}
+#smartbanner,
+html.sb-animation {
+	-webkit-transition: all .3s ease;
+}
+#smartbanner .sb-container {
+	margin: 0 auto;
+	width: 100%;
+}
+#smartbanner .sb-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    display: block;
+    border: 2px solid #fff;
+    width: 14px;
+    height: 14px;
+    /* font-family: 'ArialRoundedMTBold', Arial; */
+    font-size: 22px;
+    line-height: 15px;
+    text-align: center;
+    color: #d8d8d8;
+    /* background: #070707; */
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 14px;
+    /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); */
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+#smartbanner .sb-close:active {
+	font-size: 13px;
+	color: #aaa;
+}
+#smartbanner .sb-icon {
+	position: absolute;
+    background-color: #fff;
+    left: 15px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    height: 57px;
+    background-size: cover;
+	border-radius: 10.5px;
+	box-shadow: 0 0 9px 0 rgba(0,0,0,0.2);
+}
+#smartbanner.no-icon .sb-icon {
+	display: none;
+}
+#smartbanner .sb-info {
+	position: absolute;
+    left: 85px;
+    top: 12px;
+    width: 140px;
+    font-size: 11px;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: #a4a4a4;
+}
+#smartbanner #smartbanner.no-icon .sb-info {
+	left: 34px;
+}
+#smartbanner .sb-info strong {
+	display: block;
+	font-size: 13px;
+	color: #191919;
+	line-height: 18px;
+	padding-bottom: 7px;
+}
+#smartbanner .sb-info > span {
+	display: block;
+	color: #191919;
+	font-weight: 400;
+}
+#smartbanner .sb-info em {
+	font-style: normal;
+	text-transform: uppercase;
+}
+#smartbanner .sb-button {
+	position: absolute;
+	right: 18px;
+	top: 39px;
+	background-color: #DD2727;
+	border: 1px solid #DD2727;
+	padding: 5px 10px;
+	min-width: 15%;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: #191919;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 30px;
+}
+#smartbanner .sb-button:active,
+#smartbanner .sb-button:hover {
+	background: -webkit-linear-gradient(top, #dcdcdc 0%, #efefef 100%);
+}
+#smartbanner .sb-icon.gloss:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -1px;
+	border-top: 1px solid rgba(255, 255, 255, 0.8);
+	width: 100%;
+	height: 50%;
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%);
+	border-radius: 10px 10px 12px 12px;
+}
+#smartbanner.sb-parent {
+	border-color: #e8e8e8;
+	background-color: #f7f7f7;box-shadow: none;
+}
+#smartbanner.sb-parent .sb-close {
+	border: 0;
+	width: 17px;
+	height: 17px;
+	line-height: 17px;
+	color: #d8d8d8;
+	/* background: #DD2727; */
+	/* text-shadow: 0 1px 1px #000; */
+	/* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) inset, 0 1px 1px rgba(255, 255, 255, 0.3); */
+}
+
+#smartbanner.sb-parent .sb-close:active {
+	color: #eee;
+}
+#smartbanner.sb-parent .sb-info {
+	color: #191919;
+}
+#smartbanner.sb-parent .sb-info strong {
+	color: #191919;
+}
+#smartbanner.sb-parent .sb-button {
+	min-width: 15%;
+	background-color: #DD2727;
+	border: 1px solid #DD2727;
+	padding: 0 10px;
+	color: #fff;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	min-height: 24px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+#smartbanner.sb-parent .sb-button span {
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	display: block;
+	padding: 4px 5px;
+	// background-color: #DD2727;
+	text-transform: none;
+	text-shadow: none;
+	box-shadow: none;
+}
+#smartbanner.sb-parent .sb-button:active,
+#smartbanner.sb-parent .sb-button:hover {
+	background: none;
+}
+#smartbanner.sb-parent .sb-button:active span,
+#smartbanner.sb-parent .sb-button:hover span {
+	background: none;
+	color: #000;
+}
+#smartbanner.windows .sb-icon {
+	border-radius: 0px;
+}

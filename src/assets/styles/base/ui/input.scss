@@ -1,0 +1,269 @@
+@import './default.scss';
+
+.input-radio {
+    height: 30px;
+    width: 50px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    display: inline-flex;
+    position: relative;
+    margin-right: 10px;
+    overflow: hidden;
+    
+    input {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        cursor: pointer;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        visibility: height;
+        &:checked + span {
+            background: #111111;
+            color: #fff;
+        }
+        &:disabled + span {
+            background-color: #eeeeee;
+            color: #cccccc;
+            text-decoration: line-through;
+        }
+    }
+    span {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    &-wide {
+        width: 110px;
+    }
+
+    &-fluid {
+        display: inline-block;
+        width: 110px;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        min-width: 50px;
+        
+        span {
+            position: relative;
+            padding: 0 10px;
+        }
+    }
+}
+
+.input-checkbox {
+    position: relative;
+}
+.input-checkbox input {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + span {
+        position: relative;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0;
+    }
+
+    // Box.
+    & + span:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border: 1px solid #cccccc;
+    }
+
+    // Box checked
+    &:checked + span:before {
+        background: #111111;
+        border: 1px solid #111111;
+    }
+
+    // Disabled state span.
+    &:disabled + span {
+        color: #b8b8b8;
+        cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + span:before {
+        box-shadow: none;
+        background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + span:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 9px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+        transform: rotate(45deg);
+    }
+}
+
+.mm-input-checkbox input {
+    & + span::before {
+        border-radius: 2px;
+    }
+}
+
+.mm-input {
+    background-color: #FFF;
+    border: 1px solid #A4A4A4;
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    transition: border-color .15s ease-in-out;
+
+    &:focus {
+        border: 1px solid #005BB6;
+    }
+
+    &.error,
+    &:required,
+        &:invalid {
+        color: #ED1C24; 
+        border: 1px solid #ED1C24;
+    }
+
+    &.success {
+        border: 1px solid #42CD95;
+    }
+
+    &:disabled,
+    &:read-only {
+        cursor: not-allowed;
+        color: #c5c5c5;
+        background-color: #f7f7f7;
+    }
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+.mm-radio-circle:checked,
+.mm-radio-circle:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.mm-radio-circle:checked + label,
+.mm-radio-circle:not(:checked) + label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+.mm-radio-circle:checked + label:before,
+.mm-radio-circle:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #a4a4a4;
+    border-radius: 100%;
+    background: #fff;
+}
+.mm-radio-circle:checked + label:after,
+.mm-radio-circle:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #191919;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+}
+.mm-radio-circle:not(:checked) + label:after {
+    opacity: 0;
+}
+.mm-radio-circle:checked + label:after {
+    opacity: 1;
+}
+
+
+.mm-checkbox-toggle{
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 25px;
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        &:before {
+            position: absolute;
+            content: "";
+            left: 2px;
+            bottom: 2px;
+            -webkit-transition: .4s;
+            transition: .4s;
+            height: 22px;	
+            width: 22px;	
+            border: 0.5px solid rgba(0,0,0,0.1);	
+            background-color: #FFFFFF;	
+            box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.1), 0 3px 3px 0 rgba(0,0,0,0.05);
+        }
+        &.switch {
+            border-radius: 34px;
+            &:before {
+                border-radius: 50%;
+            }
+        }
+    }
+    input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked + .slider {
+            background-color: $btn-primary;
+        }
+        &:focus + .slider {
+            box-shadow: 0 0 1px $btn-primary;
+        }
+        &:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        
+    }
+}
+

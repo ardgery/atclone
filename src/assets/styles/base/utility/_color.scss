@@ -1,0 +1,82 @@
+$colors: (
+    'transparent'   : 'transparent',
+    'primary'       : #191919,
+    'dark'          : #4a4a4a,
+    'red'           : #ed1c24,
+    'softRed'       : #fbe9e7,
+    'grey'          : #888888,
+    'silver'        : #c5c5c5,
+    'smoothGrey'    : #e8e8e8,
+    'softGrey'      : #f3f3f3,
+    'lightGrey'     : #f7f7f7,
+    'darkGrey'      : #5a5a5a,
+    'linkGrey'      : #a4a4a4,
+    'borderGrey'    : #d8d8d8,
+    'thinGrey'      : #eeeeee,
+    'secondary'     : blue,
+    'mute'          : grey,
+    'warning'       : #ffeac8,
+    'danger'        : red,
+    'success'       : #2fd196,
+    'facebook'      : #005bb6,
+    'instagram'     : #e4405f,
+    'twitter'       : #55acee,
+    'google'        : #dd4b39,
+    'youtube'       : #cd201f,
+    'white'         : #fff,
+    'black'         : #000,
+    'niceblue'      : #005bb6,
+    'green'         : #4caf50,
+    'softGreen'     : #e8f5e9,
+    'violet'        : #4e2688,
+    'tangerine'     : #f57c00,
+    'turquoise'     : #3fd0bb,
+    'gallery'       : #f0f0f0,
+    'mds'           : #eb0029,
+    'linkDisabled'  : #ebebeb,
+    'diamond'       : #7187AA,
+    'midnightBlue'  : #2c3e50
+);
+@each $key, $value in $colors {
+	.f_c\:#{$key} {
+		color: #{$value};
+	}
+	.hv_f_c\:#{$key}:hover {
+		color: #{$value};
+	}
+	.bg_c\:#{$key} {
+		background-color: #{$value};
+	}
+	.hv_bg_c\:#{$key}:hover {
+		background-color: #{$value};
+	}
+	.b_c\:#{$key} {
+		border-color: #{$value};
+	}
+}
+
+.bg_gradient--blue {
+	background-image: linear-gradient(-135deg, #e1fef7 0%, #c1daf9 100%);
+}
+
+.bg_gradient--purple {
+	background-image: linear-gradient(-134deg, #3023ae 0%, #c86dd7 100%);
+}
+
+.bg_gradient--green {
+	background-image: linear-gradient(-134deg, #7ef6e5 0%, #61dba3 100%);
+}
+
+.bg_gradient--green {
+	background-image: linear-gradient(-134deg, #7ef6e5 0%, #61dba3 100%);
+}
+
+.bg_gradient--darkgreen {
+	background-image: linear-gradient(-90deg, #0892a1 0%, #37618c 100%);
+}
+
+.bg_img {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
